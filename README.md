@@ -2,7 +2,7 @@
 [![Docker Hub Build Status](https://github.com/makisuo/docker-postgres/actions/workflows/dockerhub.yml/badge.svg?branch=main)](https://github.com/makisuo/docker-postgres/actions/workflows/dockerhub.yml)
 
 
-# Postgres Docker Image with Self-Signed SSL Certs
+# Postgres Docker Image with Self-Signed SSL Certs and Logical Replication
 
 The [official Postgres image](https://hub.docker.com/_/postgres) comes without any SSL certificates, leaving users to create the functionality for themselves.  This image strives to provide that missing functionality by using self-signed SSL certificates.  It is available on both GitHub Container Register (`ghcr.io`) and Docker Hub (`hub.docker.com`).
 
