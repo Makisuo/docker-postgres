@@ -11,3 +11,4 @@ RUN \
   rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
   unset DEBIAN_FRONTEND
 COPY generate-ssl-certs.sh /docker-entrypoint-initdb.d/
+COPY postgresql-logical.conf /etc/postgresql/postgresql.conf.d/
