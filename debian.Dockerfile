@@ -12,6 +12,6 @@ RUN \
   unset DEBIAN_FRONTEND
 COPY generate-ssl-certs.sh /docker-entrypoint-initdb.d/
 
-# COPY postgresql.conf /etc/postgresql/postgresql.conf
-
-# CMD ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+COPY replication.conf /tmp/replication.conf
+RUN cat /tmp/replication.conf >> /usr/local/share/postgresql/postgresql.conf.sample && \
+    rm /tmp/replication.conf
