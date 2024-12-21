@@ -1,5 +1,5 @@
-[![GHCR Build Status](https://github.com/infrastructure-as-code/docker-postgres/actions/workflows/ghcr.yml/badge.svg?branch=main)](https://github.com/infrastructure-as-code/docker-postgres/actions/workflows/ghcr.yml)
-[![Docker Hub Build Status](https://github.com/infrastructure-as-code/docker-postgres/actions/workflows/dockerhub.yml/badge.svg?branch=main)](https://github.com/infrastructure-as-code/docker-postgres/actions/workflows/dockerhub.yml)
+[![GHCR Build Status](https://github.com/makisuo/docker-postgres/actions/workflows/ghcr.yml/badge.svg?branch=main)](https://github.com/makisuo/docker-postgres/actions/workflows/ghcr.yml)
+[![Docker Hub Build Status](https://github.com/makisuo/docker-postgres/actions/workflows/dockerhub.yml/badge.svg?branch=main)](https://github.com/makisuo/docker-postgres/actions/workflows/dockerhub.yml)
 
 
 # Postgres Docker Image with Self-Signed SSL Certs
@@ -22,16 +22,16 @@ Images are built for the following architecture.
 
 | Registry Name | Image Name |
 |---------------|------------|
-| GitHub Container Registry | `ghcr.io/infrastructure-as-code/postgres` |
+| GitHub Container Registry | `ghcr.io/makisuo/postgres` |
 | Docker Hub | `infrastructureascode/postgres` |
 
 ## Supported Tags and Respective Dockerfiles
 
-* [`13`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/debian.Dockerfile), [`13-alpine`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/alpine.Dockerfile)
-* [`14`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/debian.Dockerfile), [`14-alpine`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/alpine.Dockerfile)
-* [`15`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/debian.Dockerfile), [`15-alpine`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/alpine.Dockerfile)
-* [`16`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/debian.Dockerfile), [`16-alpine`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/alpine.Dockerfile)
-* [`17`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/debian.Dockerfile), [`17-alpine`](https://github.com/infrastructure-as-code/docker-postgres/blob/main/alpine.Dockerfile)
+* [`13`](https://github.com/makisuo/docker-postgres/blob/main/debian.Dockerfile), [`13-alpine`](https://github.com/makisuo/docker-postgres/blob/main/alpine.Dockerfile)
+* [`14`](https://github.com/makisuo/docker-postgres/blob/main/debian.Dockerfile), [`14-alpine`](https://github.com/makisuo/docker-postgres/blob/main/alpine.Dockerfile)
+* [`15`](https://github.com/makisuo/docker-postgres/blob/main/debian.Dockerfile), [`15-alpine`](https://github.com/makisuo/docker-postgres/blob/main/alpine.Dockerfile)
+* [`16`](https://github.com/makisuo/docker-postgres/blob/main/debian.Dockerfile), [`16-alpine`](https://github.com/makisuo/docker-postgres/blob/main/alpine.Dockerfile)
+* [`17`](https://github.com/makisuo/docker-postgres/blob/main/debian.Dockerfile), [`17-alpine`](https://github.com/makisuo/docker-postgres/blob/main/alpine.Dockerfile)
 
 
 ## Usage
@@ -41,7 +41,7 @@ Starting a container.
 ```
 docker run --rm -it \
   -e POSTGRES_PASSWORD=password \
-  ghcr.io/infrastructure-as-code/postgres:15-alpine
+  ghcr.io/makisuo/postgres:15-alpine
 ```
 
 ## Environment Variables
