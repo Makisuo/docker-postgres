@@ -12,6 +12,12 @@ RUN \
   unset DEBIAN_FRONTEND
 COPY generate-ssl-certs.sh /docker-entrypoint-initdb.d/
 
-# COPY postgresql.conf /etc/postgresql/postgresql.conf
+# Copy PostgreSQL configuration
+COPY postgresql.conf /etc/postgresql/postgresql.conf
 
-# CMD ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+# Ensure proper permissions
+RUN chown postgres:postgres /etc/postgresql/postgresql.conf && \
+    chmod 600 /etc/postgresql/postgresql.conf
+
+# Set the custom configuration file path
+ENV POSTGRES_CONFIG_FILE=/etc/postgresql/postgresql.conf
