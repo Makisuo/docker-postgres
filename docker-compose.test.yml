@@ -31,6 +31,17 @@ services:
             a.application_name = 'sut'
           ;
         \"
+        psql --expanded --command=\"
+          SELECT 
+            name,
+            setting,
+            CASE 
+              WHEN name = 'wal_level' AND setting = 'logical' THEN 'WAL level is correctly set for logical replication'
+              ELSE 'WAL level is NOT set for logical replication'
+            END as status
+          FROM pg_settings 
+          WHERE name = 'wal_level';
+        \"
         export PGSSLMODE=disable
         ! psql --expanded --command=\"
           SELECT 1;
